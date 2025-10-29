@@ -49,7 +49,6 @@
     color: black;
     padding: 0.6rem 0.2rem;
     cursor: pointer;
-    font-weight: 600;
     transition: all 0.3s ease;
 }
 
@@ -65,7 +64,6 @@
     color: black;
     padding: 0.6rem 0.2rem;
     cursor: pointer;
-    font-weight: 600;
     transition: all 0.3s ease;
 }
 
@@ -81,7 +79,6 @@
     color: black;
     padding: 0.6rem 0.2rem;
     cursor: pointer;
-    font-weight: 600;
     transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
@@ -108,7 +105,6 @@
     color: black;
     padding: 0.6rem 0.2rem;
     cursor: pointer;
-    font-weight: 600;
     transition: all 0.3s ease;
 }
 
@@ -125,7 +121,6 @@
     padding: 0.6rem 1.5rem;
     border-radius: 9999px;
     cursor: pointer;
-    font-weight: 600;
     transition: all 0.3s ease;
 }
 
@@ -184,4 +179,67 @@
 .back-to-top:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 30px rgba(59, 130, 246, 0.6);
+}
+
+/* Popular regions button */
+.ppl-regions {
+    font-size: 95%;
+    background: transparent;
+    border: none;
+    color: black;
+    padding: 0.6rem 0.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ppl-regions:hover {
+    font-weight: 800;
+    transform: translateY(-2px);
+}
+
+/* Popular destinations button */
+.ppl-destinations {
+    font-size: 95%;
+    background: transparent;
+    border: none;
+    color: black;
+    padding: 0.6rem 0.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ppl-destinations:hover {
+    font-weight: 800;
+    transform: translateY(-2px);
+}
+
+/* Popular landmarks button */
+.ppl-landmarks {
+    font-size: 95%;
+    background: transparent;
+    border: none;
+    color: black;
+    padding: 0.6rem 0.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ppl-landmarks:hover {
+    font-weight: 800;
+    transform: translateY(-2px);
+}
+
+/* Explore ZenJourney button */
+.ppl-explore {
+    font-size: 95%;
+    background: transparent;
+    border: none;
+    color: black;
+    padding: 0.6rem 0.2rem;
+    transition: all 0.3s ease;
+}
+
+.ppl-explore:hover {
+    font-weight: 800;
+    transform: translateY(-2px);
 }
