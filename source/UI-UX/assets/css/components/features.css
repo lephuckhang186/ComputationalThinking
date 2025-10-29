@@ -1,0 +1,19 @@
+/* Feature */
+
+.features {
+    text-align: center;
+    background: #fff;
+    padding: 4rem 2rem;
+    transition: background 0.6s ease, color 0.6s ease;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}

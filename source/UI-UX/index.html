@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>ZenJourney - AI-Powered Wellness Travel</title>
+    <meta name="description"
+        content="Discover amazing destinations recommended by AI based on your mood. Smart wellness travel platform for Gen Z." />
+    <meta name="keywords" content="travel, wellness, AI, mood, healing travel, Dalat, Sapa, Phu Quoc" />
+    <meta name="author" content="ZenJourney Team" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zenjourney.com/" />
+    <meta property="og:title" content="ZenJourney - Wellness Travel for Your Soul" />
+    <meta property="og:description" content="Discover amazing destinations recommended by AI based on your mood." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1506744038136-46273834b3fb" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://zenjourney.com/" />
+    <meta property="twitter:title" content="ZenJourney - Wellness Travel" />
+    <meta property="twitter:description" content="Discover amazing destinations with AI recommendations" />
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1506744038136-46273834b3fb" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%234ade80'/></svg>" />
+
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
+    </button>
+
+    <!-- Sticky Container for Top Bar + Header -->
+    <div class="sticky-container">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="top-bar-content">
+                <p>Choose your preferred language for localized experiences</p>
+                <div class="top-bar-actions">
+                    <div class="top-bar-language-switcher">
+                        <button class="top-bar-lang-btn" id="topBarLangBtn">
+                            <span class="lang-text">English (US)</span>
+                            <svg class="lang-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="top-bar-lang-dropdown" id="topBarLangDropdown">
+                            <div class="top-bar-lang-option" data-lang="en-us">
+                                <span>English (US)</span>
+                            </div>
+                            <div class="top-bar-lang-option" data-lang="en-gb">
+                                <span>English (UK)</span>
+                            </div>
+                            <div class="top-bar-lang-option" data-lang="en-au">
+                                <span>English (Australia)</span>
+                            </div>
+                            <div class="top-bar-lang-option" data-lang="en-ca">
+                                <span>English (Canada)</span>
+                            </div>
+                            <div class="top-bar-lang-option" data-lang="en-sg">
+                                <span>English (Singapore)</span>
+                            </div>
+                            <div class="top-bar-lang-option" data-lang="vi">
+                                <span>Tiếng Việt</span>
+                            </div>
+                            <div class="top-bar-lang-option" data-lang="zh-cn">
+                                <span>简体中文</span>
+                            </div>
+                            <div class="top-bar-lang-option" data-lang="zh-tw">
+                                <span>繁體中文</span>
+                            </div>
+                            <div class="top-bar-lang-option" data-lang="ja">
+                                <span>日本語</span>
+                            </div>
+                            <div class="top-bar-lang-option" data-lang="ko">
+                                <span>한국어</span>
+                            </div>
+                            <div class="top-bar-lang-option" data-lang="th">
+                                <span>ไทย</span>
+                            </div>
+                            <div class="top-bar-lang-option" data-lang="id">
+                                <span>Bahasa Indonesia</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="top-bar-btn">Go</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <img src="assets/img/Screenshot 2025-10-28 224509.png" alt="ZenJourney Logo" class="logo-circle">
+                <h1>ZenJourney</h1>
+            </div>
+
+            <div class="header-search">
+                <input type="text" class="header-search-input" placeholder="Search destinations or activities">
+                <button class="header-search-btn" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="header-actions">
+                <button class="btn-sgd" id="btnSgd">
+                    <span>SGD</span>
+                    <svg class="sgd-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg>
+                </button>
+                <button class="btn-help">Help</button>
+                <button class="btn-recently-viewed">Recently Viewed</button>
+                <button class="btn-signup">Sign up</button>
+                <button class="btn-login">Log in</button>
+                <img src="https://i.pravatar.cc/40" alt="User" class="avatar">
+            </div>
+        </header>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Coverflow 3D Container -->
+        <div class="coverflow-container">
+            <div class="coverflow">
+                <div class="coverflow-item">
+                    <div class="cover">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=80" alt="Nature"
+                            loading="lazy">
+                    </div>
+                    <div class="reflection"></div>
+                </div>
+                <div class="coverflow-item">
+                    <div class="cover">
+                        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=80"
+                            alt="Mountain" loading="lazy">
+                    </div>
+                    <div class="reflection"></div>
+                </div>
+                <div class="coverflow-item">
+                    <div class="cover">
+                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80" alt="Forest"
+                            loading="lazy">
+                    </div>
+                    <div class="reflection"></div>
+                </div>
+                <div class="coverflow-item">
+                    <div class="cover">
+                        <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?w=1200&q=80" alt="Lake"
+                            loading="lazy">
+                    </div>
+                    <div class="reflection"></div>
+                </div>
+                <div class="coverflow-item">
+                    <div class="cover">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80" alt="Beach"
+                            loading="lazy">
+                    </div>
+                    <div class="reflection"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h1 class="hero-title">Find Your Journey to Heal Your Soul</h1>
+            <p class="hero-subtitle">Discover amazing destinations powered by AI based on your mood and preferences
+            </p>
+            <div class="hero-search">
+                <svg class="hero-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input type="text" class="hero-search-input" placeholder="Explore Dalat, Sapa...">
+                <button class="hero-search-btn">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mood Selector -->
+    <section class="mood scroll-fade">
+        <h3>How are you feeling today?</h3>
+        <div class="mood-options">
+            <div class="mood-item green">😌 Peaceful<br><span>Calm & Quiet</span></div>
+            <div class="mood-item yellow">😢 Sad<br><span>Need Support</span></div>
+            <div class="mood-item pink">😤 Stressed<br><span>Need Relaxation</span></div>
+            <div class="mood-item purple">🥰 Happy<br><span>Want to Share</span></div>
+            <div class="mood-item blue">🧘‍♂️ Meditative<br><span>Inner Peace</span></div>
+        </div>
+    </section>
+
+    <!-- AI Recommendations -->
+    <section class="recommend scroll-fade">
+        <h3>🧭 AI Smart Recommendations</h3>
+        <div class="cards">
+            <div class="card">
+                <img src="https://peacetour.com.vn/Upload/TourInformation/7b48c34c-7453-45d9-8587-52e0acbf8660/du-lich-hoa-binh-Lam-Vien-quang-truong.jpg"
+                    alt="Dalat" loading="lazy">
+                <h4>Dalat</h4>
+                <p>Fresh air, thousands of flowers and cool climate all year round.</p>
+                <p class="rating">⭐ 4.8</p>
+                <button class="btn-secondary">View Details</button>
+            </div>
+            <div class="card">
+                <img src="https://sapatoursfromhanoi.com/wp-content/uploads/2017/01/Sapa-Vietnam-Overview.jpg"
+                    alt="Sapa" loading="lazy">
+                <h4>Sapa</h4>
+                <p>Majestic terraced fields, diverse Northwest mountain culture.</p>
+                <p class="rating">⭐ 4.7</p>
+                <button class="btn-secondary">View Details</button>
+            </div>
+            <div class="card">
+                <img src="https://file3.qdnd.vn/data/images/0/2022/08/25/tuanson/4.jpg?dpi=150&quality=100&w=870"
+                    alt="Phu Quoc" loading="lazy">
+                <h4>Phu Quoc</h4>
+                <p>Beautiful beaches, crystal clear water, romantic sunset.</p>
+                <p class="rating">⭐ 4.9</p>
+                <button class="btn-secondary">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot -->
+    <section class="chatbot scroll-fade">
+        <h3>🤖 ZenBot - Your Travel Companion</h3>
+        <div class="chat-box">
+            <div><span class="bot">ZenBot:</span> Hi there! 🌿 How are you feeling today? I'll help you choose
+                the perfect trip to relax!</div>
+            <div class="user-msg">I'm feeling a bit stressed and want some peace 🌱</div>
+            <div><span class="bot">ZenBot:</span> I understand! Looks like you need a quiet place to recover. Do you
+                prefer nature or beaches?</div>
+            <div class="chat-options">
+                <button class="btn-primary">🏔️ Mountains</button>
+                <button class="btn-blue">🌊 Ocean</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features scroll-fade">
+        <h3>✨ Special Features</h3>
+        <div class="feature-grid">
+            <div>
+                <div class="icon">🤖</div>
+                <h4>Smart AI</h4>
+                <p>Suggest destinations based on your mood and current weather.</p>
+            </div>
+            <div>
+                <div class="icon">💙</div>
+                <h4>Mood Journal</h4>
+                <p>Track and improve your mood through each trip.</p>
+            </div>
+            <div>
+                <div class="icon">🗓️</div>
+                <h4>Auto Itinerary</h4>
+                <p>Create perfect journeys with AI assistance.</p>
+            </div>
+            <div>
+                <div class="icon">🌍</div>
+                <h4>Community</h4>
+                <p>Connect with people who share healing interests.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>ZenJourney</h4>
+                <p>Smart wellness travel platform for Gen Z.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><svg width="24" height="24" fill="currentColor">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg></a>
+                    <a href="#" aria-label="Instagram"><svg width="24" height="24" fill="currentColor">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg></a>
+                    <a href="#" aria-label="Twitter"><svg width="24" height="24" fill="currentColor">
+                            <path
+                                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                        </svg></a>
+                    <a href="#" aria-label="YouTube"><svg width="24" height="24" fill="currentColor">
+                            <path
+                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg></a>
+                </div>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <ul>
+                    <li>Hot Destinations</li>
+                    <li>Wellness Experiences</li>
+                    <li>Sample Itineraries</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <ul>
+                    <li>Help Center</li>
+                    <li>Contact Us</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Download App</h4>
+                <p>Full experience on mobile:</p>
+                <div class="app-links">
+                    <div>App Store</div>
+                    <div>Google Play</div>
+                </div>
+            </div>
+        </div>
+        <p class="copy">© 2025 ZenJourney. All rights reserved.</p>
+    </footer>
+
+    <!-- Floating Chat Button -->
+    <button class="floating-chat" id="floatingChat" aria-label="Chat with us">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <span class="chat-badge">1</span>
+    </button>
+
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+
+</html>
