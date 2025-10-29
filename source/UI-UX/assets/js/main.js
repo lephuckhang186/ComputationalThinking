@@ -9,6 +9,7 @@ import { initCurrencyToggle } from './components/currency.js';
 import { initScrollProgress, initBackToTop } from './components/scroll.js';
 import { initCarousel } from './components/carousel.js';
 import { initFloatingChat } from './components/floating-chat.js';
+import { initAuthModal } from './components/auth-modal.js';
 
 /**
  * Initialize all application features
@@ -24,6 +25,7 @@ function init() {
     initBackToTop();
     initCarousel();
     initFloatingChat();
+    initAuthModal();
 
     console.log('✅ ZenJourney initialized successfully!');
 }
