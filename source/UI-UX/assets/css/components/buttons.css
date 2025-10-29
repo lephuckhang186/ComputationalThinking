@@ -1,0 +1,187 @@
+/* Button */
+
+.btn-primary {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 1rem;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(34, 197, 94, 0.3);
+}
+
+.btn-secondary {
+    background: white;
+    color: #3b82f6;
+    border: 2px solid #3b82f6;
+    border-radius: 9999px;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+.btn-secondary:hover {
+    background: #3b82f6;
+    color: white;
+    transform: scale(1.05);
+}
+
+.btn-blue {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    padding: 0.5rem 1.5rem;
+}
+
+/* Recently Viewed Button */
+.btn-recently-viewed {
+    background: transparent;
+    border: none;
+    color: black;
+    padding: 0.6rem 0.2rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-recently-viewed:hover {
+    font-weight: 800;
+    transform: translateY(-2px);
+}
+
+/* Help Button */
+.btn-help {
+    background: transparent;
+    border: none;
+    color: black;
+    padding: 0.6rem 0.2rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-help:hover {
+    font-weight: 800;
+    transform: translateY(-2px);
+}
+
+/* SGD Button */
+.btn-sgd {
+    background: transparent;
+    border: none;
+    color: black;
+    padding: 0.6rem 0.2rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.btn-sgd:hover {
+    font-weight: 800;
+    transform: translateY(-2px);
+}
+
+.sgd-arrow {
+    transition: transform 0.3s ease;
+}
+
+.btn-sgd.active .sgd-arrow {
+    transform: rotate(180deg);
+}
+
+/* Sign up Button */
+.btn-signup {
+    background: transparent;
+    border: none;
+    color: black;
+    padding: 0.6rem 0.2rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-signup:hover {
+    font-weight: 800;
+    transform: translateY(-2px);
+}
+
+/* Login Button */
+.btn-login {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    border: 2px solid #3b82f6;
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Top Bar Button */
+.top-bar-btn {
+    background: white;
+    color: #3b82f6;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.top-bar-btn:hover {
+    background: #eff6ff;
+    transform: scale(1.05);
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 999;
+    animation: float 3s ease-in-out infinite;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(59, 130, 246, 0.6);
+}

@@ -1,0 +1,37 @@
+/* Base Style */
+
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #60a5fa;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #60a5fa;
+}
+
+body {
+    font-family: 'Quicksand';
+    color: #333;
+    background: linear-gradient(to bottom, #eff6ff, #fffbea);
+    margin: 0;
+    padding: 0;
+    transition: background 0.6s ease, color 0.6s ease;
+}
