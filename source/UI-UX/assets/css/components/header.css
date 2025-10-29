@@ -1,4 +1,4 @@
-/* Header - TopBar */
+/* Header - TopBar - Subheader */
 
 /* Sticky Container */
 .sticky-container {
@@ -127,7 +127,6 @@
 }
 
 /* Dropdown controlled by JavaScript */
-
 .top-bar-lang-option {
     padding: 0.85rem 1.25rem;
     cursor: pointer;
@@ -154,7 +153,7 @@
 .sub-header-bar {
     background: white;
     color: #0c4a6e;
-    padding: 0.75rem 3rem;
+    padding: 0.4rem 3rem;
     border-top: 0.5px solid #3a83e864;
     border-bottom: 1px solid #e5e7eb;
     transition: background 0.6s ease;
@@ -164,7 +163,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;

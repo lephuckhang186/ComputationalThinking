@@ -189,12 +189,30 @@
     color: black;
     padding: 0.6rem 0.2rem;
     cursor: pointer;
+    position: relative;
     transition: all 0.3s ease;
+}
+
+.ppl-regions::after {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    transition: width 0.4s ease;
 }
 
 .ppl-regions:hover {
     font-weight: 800;
+    color: #3b82f6;
     transform: translateY(-2px);
+}
+
+.ppl-regions:hover::after {
+    width: 100%;
 }
 
 /* Popular destinations button */
@@ -205,12 +223,30 @@
     color: black;
     padding: 0.6rem 0.2rem;
     cursor: pointer;
+    position: relative;
     transition: all 0.3s ease;
+}
+
+.ppl-destinations::after {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    transition: width 0.4s ease;
 }
 
 .ppl-destinations:hover {
     font-weight: 800;
+    color: #3b82f6;
     transform: translateY(-2px);
+}
+
+.ppl-destinations:hover::after {
+    width: 100%;
 }
 
 /* Popular landmarks button */
@@ -221,25 +257,62 @@
     color: black;
     padding: 0.6rem 0.2rem;
     cursor: pointer;
+    position: relative;
     transition: all 0.3s ease;
+}
+
+.ppl-landmarks::after {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    transition: width 0.4s ease;
 }
 
 .ppl-landmarks:hover {
     font-weight: 800;
+    color: #3b82f6;
     transform: translateY(-2px);
 }
 
-/* Explore ZenJourney button */
+.ppl-landmarks:hover::after {
+    width: 100%;
+}
+
+/* Explore Zenjourney button */
 .ppl-explore {
     font-size: 95%;
     background: transparent;
     border: none;
     color: black;
     padding: 0.6rem 0.2rem;
+    cursor: pointer;
+    position: relative;
     transition: all 0.3s ease;
+}
+
+.ppl-explore::after {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    transition: width 0.4s ease;
 }
 
 .ppl-explore:hover {
     font-weight: 800;
+    color: #3b82f6;
     transform: translateY(-2px);
+}
+
+.ppl-explore:hover::after {
+    width: 100%;
 }

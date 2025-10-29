@@ -25,7 +25,7 @@ function init() {
     initCarousel();
     initFloatingChat();
 
-    console.log('✅ ZenJourney initialized successfully!');
+    console.log('✅ Zenjourney initialized successfully!');
 }
 
 // Initialize when DOM is ready
