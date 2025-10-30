@@ -128,8 +128,8 @@
 }
 
 .form-group input:focus {
-    border-color: #4ade80;
-    box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.1);
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 .form-group input::placeholder {
@@ -160,7 +160,7 @@
 }
 
 .password-toggle:hover {
-    color: #4ade80;
+    color: #3b82f6;
 }
 
 /* Password Strength Indicator */
@@ -199,7 +199,7 @@
 
 .password-strength-fill.strong {
     width: 100%;
-    background: #4ade80;
+    background: #3b82f6;
 }
 
 .password-strength-text {
@@ -216,7 +216,7 @@
 }
 
 .password-strength-text.strong {
-    color: #4ade80;
+    color: #3b82f6;
 }
 
 /* Form Row */
@@ -248,31 +248,31 @@
     width: 18px;
     height: 18px;
     cursor: pointer;
-    accent-color: #4ade80;
+    accent-color: #3b82f6;
 }
 
 .checkbox-label a {
-    color: #4ade80;
+    color: #3b82f6;
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .checkbox-label a:hover {
-    color: #22c55e;
+    color: #2563eb;
     text-decoration: underline;
 }
 
 /* Forgot Password Link */
 .forgot-password {
     font-size: 14px;
-    color: #4ade80;
+    color: #3b82f6;
     text-decoration: none;
     transition: color 0.2s ease;
     white-space: nowrap;
 }
 
 .forgot-password:hover {
-    color: #22c55e;
+    color: #2563eb;
     text-decoration: underline;
 }
 
@@ -283,7 +283,7 @@
     font-size: 16px;
     font-weight: 600;
     color: white;
-    background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -292,9 +292,9 @@
 }
 
 .auth-submit-btn:hover {
-    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(74, 222, 128, 0.3);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
 }
 
 .auth-submit-btn:active {
@@ -385,14 +385,14 @@
 }
 
 .auth-form-footer a {
-    color: #4ade80;
+    color: #3b82f6;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.2s ease;
 }
 
 .auth-form-footer a:hover {
-    color: #22c55e;
+    color: #2563eb;
     text-decoration: underline;
 }
 
