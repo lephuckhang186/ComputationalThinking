@@ -10,6 +10,7 @@ import { initScrollProgress, initBackToTop } from './components/scroll.js';
 import { initCarousel } from './components/carousel.js';
 import { initFloatingChat } from './components/floating-chat.js';
 import { initAuthModal } from './components/auth-modal.js';
+import { initDropdowns, initEnhancedCurrencyToggle } from './components/dropdowns.js';
 
 /**
  * Initialize all application features
@@ -26,6 +27,8 @@ function init() {
     initCarousel();
     initFloatingChat();
     initAuthModal();
+    initDropdowns();
+    initEnhancedCurrencyToggle();
 
     console.log('✅ Zenjourney initialized successfully!');
 }
