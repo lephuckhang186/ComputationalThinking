@@ -33,10 +33,11 @@
     position: relative;
     width: 90%;
     max-width: 480px;
-    max-height: 90vh;
-    overflow-y: auto;
+    max-height: 95vh;
+    overflow-y: visible;
     background: white;
-    border-radius: 16px;
+    border-radius: 0;
+    border: 3px solid #3b82f6;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     transform: scale(0.9);
     transition: transform 0.3s ease;
@@ -75,12 +76,12 @@
 
 /* ===== AUTH FORM ===== */
 .auth-form {
-    padding: 48px 40px;
+    padding: 32px 40px;
 }
 
 .auth-form-header {
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 
 .auth-form-header h2 {
@@ -98,7 +99,7 @@
 .auth-form-content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
 }
 
 /* ===== FORM GROUPS ===== */
@@ -117,9 +118,9 @@
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group input[type="password"] {
-    width: 100%;
-    padding: 12px 16px;
-    font-size: 15px;
+    width: 91%;
+    padding: 10px 16px;
+    font-size: 14px;
     border: 2px solid #e5e7eb;
     border-radius: 8px;
     outline: none;
@@ -155,12 +156,18 @@
     border: none;
     cursor: pointer;
     color: #9ca3af;
-    transition: color 0.2s ease;
+    transition: all 0.3s ease;
     padding: 4px;
 }
 
 .password-toggle:hover {
     color: #3b82f6;
+    transform: translateY(-50%) scale(1.15);
+}
+
+.password-toggle:active {
+    color: #2563eb;
+    transform: translateY(-50%) scale(0.95) rotate(15deg);
 }
 
 /* Password Strength Indicator */
@@ -233,6 +240,10 @@
     gap: 16px;
 }
 
+.form-row-2 input[type="text"] {
+    width: 80%;
+}
+
 /* Checkbox Label */
 .checkbox-label {
     display: flex;
@@ -279,7 +290,7 @@
 /* Submit Button */
 .auth-submit-btn {
     width: 100%;
-    padding: 14px 24px;
+    padding: 12px 24px;
     font-size: 16px;
     font-weight: 600;
     color: white;
@@ -288,7 +299,7 @@
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-top: 8px;
+    margin-top: 4px;
 }
 
 .auth-submit-btn:hover {
@@ -305,7 +316,7 @@
 .divider {
     position: relative;
     text-align: center;
-    margin: 24px 0;
+    margin: 16px 0;
 }
 
 .divider::before {
@@ -374,8 +385,8 @@
 /* Footer */
 .auth-form-footer {
     text-align: center;
-    margin-top: 24px;
-    padding-top: 24px;
+    margin-top: 16px;
+    padding-top: 16px;
     border-top: 1px solid #e5e7eb;
 }
 
@@ -447,6 +458,7 @@
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -457,6 +469,7 @@
         transform: translateY(-20px) scale(0.95);
         opacity: 0;
     }
+
     to {
         transform: translateY(0) scale(1);
         opacity: 1;
@@ -471,4 +484,3 @@
 body.modal-open {
     overflow: hidden;
 }
-
