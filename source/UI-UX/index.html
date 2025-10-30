@@ -121,15 +121,138 @@
             </div>
 
             <div class="header-actions">
+                <!-- Currency Selector -->
+                <div class="header-dropdown">
                 <button class="btn-sgd" id="btnSgd">
-                    <span>SGD</span>
+                        <span class="currency-text">USD</span>
                     <svg class="sgd-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2">
                         <path d="M6 9l6 6 6-6" />
                     </svg>
                 </button>
-                <button class="btn-help">Help</button>
-                <button class="btn-recently-viewed">Recently Viewed</button>
+                    <div class="dropdown-menu currency-dropdown" id="currencyDropdown">
+                        <div class="dropdown-search">
+                            <input type="text" placeholder="Search currency..." id="currencySearch">
+                        </div>
+                        <div class="currency-list">
+                            <button class="currency-option" data-currency="USD" data-symbol="$">
+                                <span class="currency-code">USD</span>
+                                <span class="currency-name">US Dollar</span>
+                            </button>
+                            <button class="currency-option" data-currency="SGD" data-symbol="S$">
+                                <span class="currency-code">SGD</span>
+                                <span class="currency-name">Singapore Dollar</span>
+                            </button>
+                            <button class="currency-option" data-currency="VND" data-symbol="₫">
+                                <span class="currency-code">VND</span>
+                                <span class="currency-name">Vietnamese Dong</span>
+                            </button>
+                            <button class="currency-option" data-currency="EUR" data-symbol="€">
+                                <span class="currency-code">EUR</span>
+                                <span class="currency-name">Euro</span>
+                            </button>
+                            <button class="currency-option" data-currency="GBP" data-symbol="£">
+                                <span class="currency-code">GBP</span>
+                                <span class="currency-name">British Pound</span>
+                            </button>
+                            <button class="currency-option" data-currency="JPY" data-symbol="¥">
+                                <span class="currency-code">JPY</span>
+                                <span class="currency-name">Japanese Yen</span>
+                            </button>
+                            <button class="currency-option" data-currency="AUD" data-symbol="A$">
+                                <span class="currency-code">AUD</span>
+                                <span class="currency-name">Australian Dollar</span>
+                            </button>
+                            <button class="currency-option" data-currency="CAD" data-symbol="C$">
+                                <span class="currency-code">CAD</span>
+                                <span class="currency-name">Canadian Dollar</span>
+                            </button>
+                            <button class="currency-option" data-currency="THB" data-symbol="฿">
+                                <span class="currency-code">THB</span>
+                                <span class="currency-name">Thai Baht</span>
+                            </button>
+                            <button class="currency-option" data-currency="MYR" data-symbol="RM">
+                                <span class="currency-code">MYR</span>
+                                <span class="currency-name">Malaysian Ringgit</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Help Dropdown -->
+                <div class="header-dropdown">
+                    <button class="btn-help">
+                        Help
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu help-dropdown" id="helpDropdown">
+                        <a href="#" class="help-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                            </svg>
+                            <div>
+                                <strong>Help Center</strong>
+                                <span>Find answers to your questions</span>
+                            </div>
+                        </a>
+                        <a href="#" class="help-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                            <div>
+                                <strong>Live Chat</strong>
+                                <span>Chat with our support team</span>
+                            </div>
+                        </a>
+                        <a href="#" class="help-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <div>
+                                <strong>Email Support</strong>
+                                <span>Send us an email</span>
+                            </div>
+                        </a>
+                        <a href="#" class="help-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <div>
+                                <strong>Call Us</strong>
+                                <span>+1 (800) 123-4567</span>
+                            </div>
+                        </a>
+                        <div class="help-divider"></div>
+                        <a href="#" class="help-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                            </svg>
+                            <div>
+                                <strong>FAQs</strong>
+                                <span>Common questions</span>
+                            </div>
+                        </a>
+                        <a href="#" class="help-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="8.5" cy="7" r="4"></circle>
+                                <polyline points="17 11 19 13 23 9"></polyline>
+                            </svg>
+                            <div>
+                                <strong>Travel Guide</strong>
+                                <span>Tips & recommendations</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <button class="btn-recently-viewed" id="btnRecentlyViewed">Recently Viewed</button>
                 <button class="btn-signup">Sign up</button>
                 <button class="btn-login">Log in</button>
                 <img src="https://i.pravatar.cc/40" alt="User" class="avatar">
@@ -138,11 +261,507 @@
 
         <!-- Sub Header Bar -->
         <div class="sub-header-bar">
-            <div class="sub-header-actions">
-                <button class="ppl-regions">Popular regions</button>
-                <button class="ppl-destinations">Popular destinations</button>
-                <button class="ppl-landmarks">Popular landmarks</button>
-                <button class="ppl-explore">Explore Zenjourney</button>
+            <div class="sub-header-content">
+                <div class="sub-header-actions">
+                    <!-- Popular Regions Dropdown -->
+                    <div class="sub-header-dropdown">
+                        <button class="sub-header-btn" data-dropdown="regions">
+                            Popular regions
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu" id="regions-dropdown">
+                            <div class="dropdown-grid">
+                                <div class="dropdown-column">
+                                    <h4>Southeast Asia</h4>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=100&h=100&fit=crop" alt="Vietnam">
+                                        <span>Vietnam</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=100&h=100&fit=crop" alt="Thailand">
+                                        <span>Thailand</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=100&h=100&fit=crop" alt="Singapore">
+                                        <span>Singapore</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=100&h=100&fit=crop" alt="Malaysia">
+                                        <span>Malaysia</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=100&h=100&fit=crop" alt="Indonesia">
+                                        <span>Indonesia</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>East Asia</h4>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=100&h=100&fit=crop" alt="Japan">
+                                        <span>Japan</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?w=100&h=100&fit=crop" alt="South Korea">
+                                        <span>South Korea</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=100&h=100&fit=crop" alt="China">
+                                        <span>China</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://lp-cms-production.imgix.net/2019-06/f15f7b57ab31c217f471c6712a2654e0-taipei-101.jpg?sharp=10&vib=20&w=1200" alt="Taiwan">
+                                        <span>Taiwan</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://tse3.mm.bing.net/th/id/OIP.-kISZG5XG4-CyGbvcjTgEQHaE9?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Hong Kong">
+                                        <span>Hong Kong</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>Europe</h4>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=100&h=100&fit=crop" alt="United Kingdom">
+                                        <span>United Kingdom</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=100&h=100&fit=crop" alt="France">
+                                        <span>France</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?w=100&h=100&fit=crop" alt="Italy">
+                                        <span>Italy</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1543783207-ec64e4d95325?w=100&h=100&fit=crop" alt="Spain">
+                                        <span>Spain</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1527668752968-14dc70a27c95?w=100&h=100&fit=crop" alt="Switzerland">
+                                        <span>Switzerland</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>Oceania & Americas</h4>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=100&h=100&fit=crop" alt="Australia">
+                                        <span>Australia</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=100&h=100&fit=crop" alt="New Zealand">
+                                        <span>New Zealand</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?w=100&h=100&fit=crop" alt="United States">
+                                        <span>United States</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?w=100&h=100&fit=crop" alt="Canada">
+                                        <span>Canada</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=100&h=100&fit=crop" alt="Brazil">
+                                        <span>Brazil</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Popular Destinations Dropdown -->
+                    <div class="sub-header-dropdown">
+                        <button class="sub-header-btn" data-dropdown="destinations">
+                            Popular destinations
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu" id="destinations-dropdown">
+                            <div class="dropdown-grid">
+                                <div class="dropdown-column">
+                                    <h4>Vietnam Cities</h4>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=100&h=100&fit=crop" alt="Ho Chi Minh City">
+                                        <span>Ho Chi Minh City</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=100&h=100&fit=crop" alt="Hanoi">
+                                        <span>Hanoi</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://danangprivatecar.com/wp-content/uploads/2022/11/The-reasons-why-My-Khe-beach-in-Da-Nang-was-voted-the-most-beautiful-on-the-planet-.jpeg" alt="Da Nang">
+                                        <span>Da Nang</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://peacetour.com.vn/Upload/TourInformation/7b48c34c-7453-45d9-8587-52e0acbf8660/du-lich-hoa-binh-Lam-Vien-quang-truong.jpg" alt="Dalat">
+                                        <span>Dalat</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://sapatoursfromhanoi.com/wp-content/uploads/2017/01/Sapa-Vietnam-Overview.jpg" alt="Sapa">
+                                        <span>Sapa</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>Beach Paradise</h4>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=100&h=100&fit=crop" alt="Phu Quoc">
+                                        <span>Phu Quoc</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=100&h=100&fit=crop" alt="Phuket">
+                                        <span>Phuket</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=100&h=100&fit=crop" alt="Bali">
+                                        <span>Bali</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=100&h=100&fit=crop" alt="Maldives">
+                                        <span>Maldives</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://tse2.mm.bing.net/th/id/OIP.FTwAXu7hbgM75MGRIIuViAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Palawan">
+                                        <span>Palawan</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>Top Asian Cities</h4>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://1.bp.blogspot.com/-J_mxDklJCq4/WNyYY6UGvhI/AAAAAAAABsg/OgKCqEwhpe0PIBuH6xqGUnlL1DJPsSJqACEw/s1600/grand-palace-bangkok.jpg" alt="Bangkok">
+                                        <span>Bangkok</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=100&h=100&fit=crop" alt="Singapore">
+                                        <span>Singapore</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=100&h=100&fit=crop" alt="Tokyo">
+                                        <span>Tokyo</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?w=100&h=100&fit=crop" alt="Seoul">
+                                        <span>Seoul</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://tse4.mm.bing.net/th/id/OIP.fu5ATt7gtYBHcRn7IGwS1QHaFj?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Hong Kong">
+                                        <span>Hong Kong</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>Cultural Heritage</h4>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=100&h=100&fit=crop" alt="Kyoto">
+                                        <span>Kyoto</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://th.bing.com/th/id/R.b371b6c2fc2bbb4a544772c235ecc078?rik=wS4j3wa9ZHtEWA&pid=ImgRaw&r=0" alt="Hoi An">
+                                        <span>Hoi An</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=100&h=100&fit=crop" alt="Chiang Mai">
+                                        <span>Chiang Mai</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1540611025311-01df3cef54b5?w=100&h=100&fit=crop" alt="Luang Prabang">
+                                        <span>Luang Prabang</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=100&h=100&fit=crop" alt="Ubud">
+                                        <span>Ubud</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Popular Landmarks Dropdown -->
+                    <div class="sub-header-dropdown">
+                        <button class="sub-header-btn" data-dropdown="landmarks">
+                            Popular landmarks
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu" id="landmarks-dropdown">
+                            <div class="dropdown-grid">
+                                <div class="dropdown-column">
+                                    <h4>Vietnam Highlights</h4>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1528127269322-539801943592?w=100&h=100&fit=crop" alt="Ha Long Bay">
+                                        <span>Ha Long Bay</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://th.bing.com/th/id/R.8815008c7ea3cad44b3e6c57a8f88aa3?rik=JKzC2cA2%2b3jDng&riu=http%3a%2f%2flh4.googleusercontent.com%2f-IYhWly2DZyk%2fVGwet6hdLWI%2fAAAAAAAABkw%2fWaTJ2lU_egM%2fs1600%2fHoi%252BAn%252Btown.jpg&ehk=0HrW%2fT3k7GWwLNA0XgroipX6YokEnHoe2IKNaDWb9J4%3d&risl=&pid=ImgRaw&r=0" alt="Hoi An Ancient Town">
+                                        <span>Hoi An Ancient Town</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=100&h=100&fit=crop" alt="Cu Chi Tunnels">
+                                        <span>Cu Chi Tunnels</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://a.cdn-hotels.com/gdcs/production76/d71/a0914f37-02e2-4c0f-bd7c-a749df29709b.jpg?impolicy=fcrop&w=1600&h=1066&q=medium" alt="Imperial City Hue">
+                                        <span>Imperial City Hue</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://tse4.mm.bing.net/th/id/OIP.K_dsNtBOXEojOtQb59yp7AHaEH?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Mekong Delta">
+                                        <span>Mekong Delta</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>Iconic Landmarks</h4>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=100&h=100&fit=crop" alt="Angkor Wat">
+                                        <span>Angkor Wat</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=100&h=100&fit=crop" alt="Petronas Towers">
+                                        <span>Petronas Towers</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=100&h=100&fit=crop" alt="Marina Bay Sands">
+                                        <span>Marina Bay Sands</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=100&h=100&fit=crop" alt="Tokyo Tower">
+                                        <span>Tokyo Tower</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1570459027562-4a916cc6113f?w=100&h=100&fit=crop" alt="Mount Fuji">
+                                        <span>Mount Fuji</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>Theme Parks</h4>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://tse2.mm.bing.net/th/id/OIP.uXYZVe-v2KHcvO8Y_nENtAHaFM?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Universal Studios">
+                                        <span>Universal Studios</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=100&h=100&fit=crop" alt="Disneyland">
+                                        <span>Disneyland</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=100&h=100&fit=crop" alt="Tokyo DisneySea">
+                                        <span>Tokyo DisneySea</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://th.bing.com/th/id/OIP.NwOSYeeJP8eun5fEx2IyuwHaE7?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Ocean Park">
+                                        <span>Ocean Park</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?w=100&h=100&fit=crop" alt="Everland">
+                                        <span>Everland</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>Nature & Wildlife</h4>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=100&h=100&fit=crop" alt="Mount Bromo">
+                                        <span>Mount Bromo</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=100&h=100&fit=crop" alt="Komodo Island">
+                                        <span>Komodo Island</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://tse2.mm.bing.net/th/id/OIP.wQwrz-7AUURZFWsK1xy80QHaEo?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Chocolate Hills">
+                                        <span>Chocolate Hills</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=100&h=100&fit=crop" alt="Rice Terraces">
+                                        <span>Rice Terraces</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link">
+                                        <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=100&h=100&fit=crop" alt="Elephant Sanctuary">
+                                        <span>Elephant Sanctuary</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Explore Dropdown -->
+                    <div class="sub-header-dropdown">
+                        <button class="sub-header-btn" data-dropdown="explore">
+                            Explore Zenjourney
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu" id="explore-dropdown">
+                            <div class="dropdown-grid">
+                                <div class="dropdown-column">
+                                    <h4>Activities</h4>
+                                    <a href="#" class="dropdown-link dropdown-link-icon">
+                                        <div class="icon-circle">🗺️</div>
+                                        <span>Tours & Sightseeing</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link dropdown-link-icon">
+                                        <div class="icon-circle">🏄</div>
+                                        <span>Water Sports</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link dropdown-link-icon">
+                                        <div class="icon-circle">🧗</div>
+                                        <span>Adventure Activities</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link dropdown-link-icon">
+                                        <div class="icon-circle">🎭</div>
+                                        <span>Cultural Experiences</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link dropdown-link-icon">
+                                        <div class="icon-circle">🍜</div>
+                                        <span>Food & Dining</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link dropdown-link-icon">
+                                        <div class="icon-circle">💆</div>
+                                        <span>Spa & Wellness</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>Transport</h4>
+                                    <a href="#" class="dropdown-link dropdown-link-icon">
+                                        <div class="icon-circle">✈️</div>
+                                        <span>Airport Transfers</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link dropdown-link-icon">
+                                        <div class="icon-circle">🚄</div>
+                                        <span>Train Tickets</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link dropdown-link-icon">
+                                        <div class="icon-circle">🚌</div>
+                                        <span>Bus Passes</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link dropdown-link-icon">
+                                        <div class="icon-circle">🚗</div>
+                                        <span>Car Rentals</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link dropdown-link-icon">
+                                        <div class="icon-circle">🚴</div>
+                                        <span>Bike Rentals</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link dropdown-link-icon">
+                                        <div class="icon-circle">⛴️</div>
+                                        <span>Ferry Tickets</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>Accommodation</h4>
+                                    <a href="#" class="dropdown-link dropdown-link-icon">
+                                        <div class="icon-circle">🏨</div>
+                                        <span>Hotels</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link dropdown-link-icon">
+                                        <div class="icon-circle">🏖️</div>
+                                        <span>Resorts</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link dropdown-link-icon">
+                                        <div class="icon-circle">🛏️</div>
+                                        <span>Hostels</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link dropdown-link-icon">
+                                        <div class="icon-circle">🏠</div>
+                                        <span>Vacation Rentals</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link dropdown-link-icon">
+                                        <div class="icon-circle">⛺</div>
+                                        <span>Glamping</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link dropdown-link-icon">
+                                        <div class="icon-circle">🏰</div>
+                                        <span>Unique Stays</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>Services</h4>
+                                    <a href="#" class="dropdown-link dropdown-link-icon">
+                                        <div class="icon-circle">🛡️</div>
+                                        <span>Travel Insurance</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link dropdown-link-icon">
+                                        <div class="icon-circle">📱</div>
+                                        <span>WiFi & SIM Cards</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link dropdown-link-icon">
+                                        <div class="icon-circle">📄</div>
+                                        <span>Visa Services</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link dropdown-link-icon">
+                                        <div class="icon-circle">📖</div>
+                                        <span>Travel Guides</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link dropdown-link-icon">
+                                        <div class="icon-circle">🎁</div>
+                                        <span>Gift Cards</span>
+                                    </a>
+                                    <a href="#" class="dropdown-link dropdown-link-icon">
+                                        <div class="icon-circle">💬</div>
+                                        <span>Customer Support</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gift Cards Link -->
+                <a href="#" class="gift-cards-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                        <path d="M16 3h-8a2 2 0 0 0-2 2v2h12V5a2 2 0 0 0-2-2z"></path>
+                        <path d="M12 7v14"></path>
+                    </svg>
+                    Gift cards
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recently Viewed Sidebar -->
+    <div class="recently-viewed-sidebar" id="recentlyViewedSidebar">
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        <div class="sidebar-content">
+            <div class="sidebar-header">
+                <h3>Recently Viewed</h3>
+                <button class="sidebar-close" id="sidebarClose" aria-label="Close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="sidebar-body">
+                <div class="recently-viewed-item">
+                    <img src="https://peacetour.com.vn/Upload/TourInformation/7b48c34c-7453-45d9-8587-52e0acbf8660/du-lich-hoa-binh-Lam-Vien-quang-truong.jpg" alt="Dalat">
+                    <div class="item-info">
+                        <h4>Dalat Highland Tour</h4>
+                        <p>⭐ 4.8 (1,234 reviews)</p>
+                        <p class="price">From $45</p>
+                    </div>
+                </div>
+                <div class="recently-viewed-item">
+                    <img src="https://sapatoursfromhanoi.com/wp-content/uploads/2017/01/Sapa-Vietnam-Overview.jpg" alt="Sapa">
+                    <div class="item-info">
+                        <h4>Sapa Trekking Experience</h4>
+                        <p>⭐ 4.7 (892 reviews)</p>
+                        <p class="price">From $65</p>
+                    </div>
+                </div>
+                <div class="recently-viewed-item">
+                    <img src="https://file3.qdnd.vn/data/images/0/2022/08/25/tuanson/4.jpg?dpi=150&quality=100&w=870" alt="Phu Quoc">
+                    <div class="item-info">
+                        <h4>Phu Quoc Island Hopping</h4>
+                        <p>⭐ 4.9 (2,156 reviews)</p>
+                        <p class="price">From $55</p>
+                    </div>
+                </div>
+                <div class="empty-state" style="display: none;">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 8v4M12 16h.01"></path>
+                    </svg>
+                    <p>No recently viewed items</p>
+                    <span>Start exploring to see your history here</span>
+                </div>
             </div>
         </div>
     </div>
