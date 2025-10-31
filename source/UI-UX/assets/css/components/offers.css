@@ -5,7 +5,7 @@
 }
 
 .travelers-section {
-    padding: 30px 0 60px 0;
+    padding: 30px 0 20px 0;
     background: #f8f9fa;
 }
 
@@ -61,7 +61,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: right 5%;
+    object-position: right 0%;
     transform: scale(1);
 }
 
@@ -152,6 +152,7 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     cursor: pointer;
+    border: 1px solid #308bdb;
 }
 
 .travel-card:hover {
@@ -191,23 +192,33 @@
 
 .travel-content {
     padding: 20px;
+    color: #1f2937;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .travel-badge {
-    background: #3b82f6;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
     color: white;
     padding: 6px 12px;
     border-radius: 6px;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
     display: inline-block;
-    margin-bottom: 12px;
+    margin-bottom: 4px;
+    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
 }
 
 .travel-category {
     font-size: 13px;
     color: #6b7280;
     margin-bottom: 8px;
+    line-height: 1.3;
+    font-weight: 500;
+    letter-spacing: 0.3px;
 }
 
 .travel-content h3 {
@@ -215,88 +226,142 @@
     font-weight: 700;
     color: #1f2937;
     margin-bottom: 8px;
-    line-height: 1.4;
+    line-height: 1.3;
+    letter-spacing: -0.2px;
 }
 
 .travel-booking {
-    font-size: 13px;
-    color: #10b981;
+    font-size: 12px;
+    color: #6b7280;
     margin-bottom: 8px;
+    font-weight: 500;
+    display: inline-block;
+    background: #f3f4f6;
+    padding: 4px 10px;
+    border-radius: 12px;
 }
 
 .travel-rating {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 12px;
+    gap: 6px;
+    margin-bottom: 8px;
     font-size: 14px;
+    min-height: 20px;
 }
 
 .travel-rating .star {
     color: #f59e0b;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.travel-rating .star-number {
+    color: #f59e0b;
+    font-weight: 700;
+    font-size: 14px;
 }
 
 .travel-rating .reviews {
     color: #6b7280;
+    font-weight: 400;
+    font-size: 13px;
 }
 
 .travel-price {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 8px;
-    margin-top: 12px;
+    margin-top: auto;
+    padding-top: 4px;
 }
 
 .price-from {
-    font-size: 14px;
+    font-size: 13px;
     color: #6b7280;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .price-current {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
     color: #1f2937;
+    line-height: 1;
+    letter-spacing: -0.3px;
+    word-spacing: -6px;
+    white-space: nowrap;
 }
 
 .price-old {
     font-size: 16px;
     color: #9ca3af;
     text-decoration: line-through;
+    font-weight: 400;
 }
 
 .voucher-badge {
-    background: #fef3c7;
-    border: 1px solid #fbbf24;
-    color: #92400e;
-    padding: 6px 12px;
+    background: linear-gradient(135deg, #308bdb, #79c7ed);
+    border: 1px solid #308bdb;
+    color: white;
+    padding: 8px 14px;
     border-radius: 6px;
     font-size: 12px;
     font-weight: 600;
     margin-top: 12px;
     display: inline-block;
+    box-shadow: 0 2px 4px rgba(48, 139, 219, 0.3);
+    letter-spacing: 0.3px;
 }
 
-/* Gradient Cards */
-.orange-gradient {
-    background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+.zenjourney-choice-badge {
+    background: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 8px;
+    display: inline-block;
+    position: relative;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(135deg, #308bdb, #79c7ed);
+    border: 1px solid #308bdb;
 }
 
-.orange-gradient .travel-content {
-    color: white;
-}
-
-.orange-gradient .travel-category,
-.orange-gradient .travel-booking,
-.orange-gradient h3 {
-    color: white;
-}
-
-.purple-gradient {
-    border: 2px solid #c7d2fe;
+.zenjourney-choice-badge::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #308bdb, #79c7ed);
+    z-index: -1;
+    padding: 1px;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
 }
 
 /* See More Button */
+@keyframes expandFromCenter {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 .see-more-btn {
     display: block;
     margin: 0 auto;
@@ -306,16 +371,46 @@
     color: #1f2937;
     font-size: 16px;
     font-weight: 600;
+    border-color: #77aae9;
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    animation: expandFromCenter 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.see-more-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: linear-gradient(135deg, #308bdb, #79c7ed);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.see-more-btn:hover::before {
+    width: 300%;
+    height: 300%;
+    border-radius: 8px;
+}
+
+.see-more-btn * {
+    position: relative;
+    z-index: 1;
 }
 
 .see-more-btn:hover {
-    background: #f9fafb;
-    border-color: #d1d5db;
+    border-color: #308bdb;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(48, 139, 219, 0.3);
+    color: white;
 }
 
 /* ===== RESPONSIVE ===== */
