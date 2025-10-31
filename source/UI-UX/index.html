@@ -1012,50 +1012,96 @@
         </div>
     </section>
 
-    <!-- AI Recommendations -->
-    <section class="recommend scroll-fade">
-        <h3>🧭 AI Smart Recommendations</h3>
-        <div class="cards">
-            <div class="card">
-                <img src="https://peacetour.com.vn/Upload/TourInformation/7b48c34c-7453-45d9-8587-52e0acbf8660/du-lich-hoa-binh-Lam-Vien-quang-truong.jpg"
-                    alt="Dalat" loading="lazy">
-                <h4>Dalat</h4>
-                <p>Fresh air, thousands of flowers and cool climate all year round.</p>
-                <p class="rating">⭐ 4.8</p>
-                <button class="btn-secondary">View Details</button>
-            </div>
-            <div class="card">
-                <img src="https://sapatoursfromhanoi.com/wp-content/uploads/2017/01/Sapa-Vietnam-Overview.jpg"
-                    alt="Sapa" loading="lazy">
-                <h4>Sapa</h4>
-                <p>Majestic terraced fields, diverse Northwest mountain culture.</p>
-                <p class="rating">⭐ 4.7</p>
-                <button class="btn-secondary">View Details</button>
-            </div>
-            <div class="card">
-                <img src="https://file3.qdnd.vn/data/images/0/2022/08/25/tuanson/4.jpg?dpi=150&quality=100&w=870"
-                    alt="Phu Quoc" loading="lazy">
-                <h4>Phu Quoc</h4>
-                <p>Beautiful beaches, crystal clear water, romantic sunset.</p>
-                <p class="rating">⭐ 4.9</p>
-                <button class="btn-secondary">View Details</button>
+    <!-- Where to next? -->
+    <section class="where-to-next scroll-fade">
+        <div class="container">
+            <h2 class="section-title">Where to next?</h2>
+            <div class="destinations-scroll-container">
+                <button class="scroll-arrow scroll-arrow-left" aria-label="Scroll left">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <div class="destinations-scroll">
+                    <div class="destination-card">
+                        <img src="https://file3.qdnd.vn/data/images/0/2022/08/25/tuanson/4.jpg?dpi=150&quality=100&w=870"
+                            alt="Phu Quoc" loading="lazy">
+                    </div>
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=800&h=600&fit=crop"
+                            alt="Hanoi" loading="lazy">
+                    </div>
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&h=600&fit=crop"
+                            alt="Ho Chi Minh" loading="lazy">
+                    </div>
+                    <div class="destination-card">
+                        <img src="https://danangprivatecar.com/wp-content/uploads/2022/11/The-reasons-why-My-Khe-beach-in-Da-Nang-was-voted-the-most-beautiful-on-the-planet-.jpeg"
+                            alt="Da Nang" loading="lazy">
+                    </div>
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1528127269322-539801943592?w=800&h=600&fit=crop"
+                            alt="Ha Long" loading="lazy">
+                    </div>
+                    <div class="destination-card">
+                        <img src="https://sapatoursfromhanoi.com/wp-content/uploads/2017/01/Sapa-Vietnam-Overview.jpg"
+                            alt="Sapa" loading="lazy">
+                    </div>
+                    <div class="destination-card">
+                        <img src="https://peacetour.com.vn/Upload/TourInformation/7b48c34c-7453-45d9-8587-52e0acbf8660/du-lich-hoa-binh-Lam-Vien-quang-truong.jpg"
+                            alt="Dalat" loading="lazy">
+                    </div>
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&h=600&fit=crop"
+                            alt="Nature" loading="lazy">
+                    </div>
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop"
+                            alt="Mountain" loading="lazy">
+                    </div>
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop"
+                            alt="Forest" loading="lazy">
+                    </div>
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?w=800&h=600&fit=crop"
+                            alt="Lake" loading="lazy">
+                    </div>
+                </div>
+                <button class="scroll-arrow scroll-arrow-right" aria-label="Scroll right">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- Chatbot -->
+    <!-- Chatbot with AI Recommendations -->
     <section class="chatbot scroll-fade">
         <h3>🤖 ZenBot - Your Travel Companion</h3>
         <div class="chat-box">
-            <div><span class="bot">ZenBot:</span> Hi there! 🌿 How are you feeling today? I'll help you choose
-                the perfect trip to relax!</div>
-            <div class="user-msg">I'm feeling a bit stressed and want some peace 🌱</div>
-            <div><span class="bot">ZenBot:</span> I understand! Looks like you need a quiet place to recover. Do you
-                prefer nature or beaches?</div>
-            <div class="chat-options">
-                <button class="btn-primary">🏔️ Mountains</button>
-                <button class="btn-blue">🌊 Ocean</button>
+            <div class="bot-msg-wrapper">
+                <img src="assets/img/Screenshot 2025-10-28 224509.png" alt="ZenBot" class="bot-avatar">
+                <div class="bot-msg"><span class="bot">ZenBot:</span> Hi there! 🌿 How are you feeling today? I'll help
+                    you choose
+                    the perfect trip to relax!</div>
             </div>
+            <div class="user-msg-wrapper">
+                <div class="user-msg">I'm feeling a bit stressed and want some peace 🌱</div>
+                <img src="https://i.pravatar.cc/40" alt="User" class="user-avatar">
+            </div>
+            <div class="bot-msg-wrapper">
+                <img src="assets/img/Screenshot 2025-10-28 224509.png" alt="ZenBot" class="bot-avatar">
+                <div class="bot-msg"><span class="bot">ZenBot:</span> I understand! Looks like you need a quiet place to
+                    recover. Do you
+                    prefer nature or beaches?</div>
+            </div>
+            <div class="chat-options">
+                <button class="btn-primary" data-choice="mountain">🏔️ Mountains</button>
+                <button class="btn-blue" data-choice="ocean">🌊 Ocean</button>
+            </div>
+            <div class="recommendation-cards" id="recommendationCards"></div>
         </div>
     </section>
 
