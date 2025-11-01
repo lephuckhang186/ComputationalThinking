@@ -20,4 +20,5 @@
 @import 'components/features.css';
 @import 'components/footer.css';
 @import 'components/floating-chat.css';
+@import 'components/chatbot-popup.css';
 @import 'components/auth-modal.css';

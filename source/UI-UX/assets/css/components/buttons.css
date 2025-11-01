@@ -181,6 +181,11 @@
     box-shadow: 0 6px 30px rgba(59, 130, 246, 0.6);
 }
 
+.back-to-top.chat-open {
+    bottom: 30px;
+    transition: bottom 0.3s ease;
+}
+
 /* Popular regions button */
 .ppl-regions {
     font-size: 95%;
