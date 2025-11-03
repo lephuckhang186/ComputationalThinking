@@ -17,7 +17,7 @@ export function initFloatingChat() {
     // Function to open popup
     const openPopup = () => {
         chatbotPopup.classList.add('active');
-        floatingChat.classList.add('hidden');
+        floatingChat.classList.add('chat-open');
         if (backToTopBtn) {
             backToTopBtn.classList.add('chat-open');
         }
@@ -30,18 +30,12 @@ export function initFloatingChat() {
         chatbotPopup.classList.add('closing');
         chatbotPopup.classList.remove('active');
         
-        // Wait for closing animation to complete before hiding
+        // Wait for closing animation to complete
         setTimeout(() => {
             chatbotPopup.classList.remove('closing');
             
-            // Show chatbot icon with animation
-            floatingChat.classList.remove('hidden');
-            floatingChat.classList.add('showing');
-            
-            // Remove showing class after animation completes
-            setTimeout(() => {
-                floatingChat.classList.remove('showing');
-            }, 400);
+            // Remove chat-open class from floating button
+            floatingChat.classList.remove('chat-open');
             
             if (backToTopBtn) {
                 backToTopBtn.classList.remove('chat-open');
@@ -49,8 +43,17 @@ export function initFloatingChat() {
         }, 250); // Match the closing animation duration
     };
 
-    // Open popup
-    floatingChat.addEventListener('click', openPopup);
+    // Toggle popup on floating chat button click
+    floatingChat.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (chatbotPopup.classList.contains('active')) {
+            // If chat is open, close it
+            closePopup();
+        } else {
+            // If chat is closed, open it
+            openPopup();
+        }
+    });
 
     // Close popup
     chatbotClose.addEventListener('click', closePopup);
