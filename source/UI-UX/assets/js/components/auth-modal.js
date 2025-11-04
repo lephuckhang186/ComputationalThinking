@@ -1,4 +1,7 @@
 // Auth Modal Handler
+import { registerUser, loginUser, setCurrentUser, getCurrentUser } from '../services/userService.js';
+import { updateHeaderForAuth } from './user-menu.js';
+
 export function initAuthModal() {
     const authModal = document.getElementById('authModal');
     const authModalOverlay = document.getElementById('authModalOverlay');
@@ -171,20 +174,34 @@ export function initAuthModal() {
     const signupFormElement = signupForm?.querySelector('form');
 
     if (loginFormElement) {
-        loginFormElement.addEventListener('submit', (e) => {
+        loginFormElement.addEventListener('submit', async (e) => {
             e.preventDefault();
             
             const email = document.getElementById('loginEmail').value;
             const password = document.getElementById('loginPassword').value;
             
-            // Demo: Show success message
-            console.log('Login attempted with:', { email, password });
-            alert('Login functionality will be implemented with backend integration!');
+            try {
+                const user = await loginUser(email, password);
+                setCurrentUser(user);
+                
+                // Close modal
+                closeModal();
+                
+                // Clear form
+                loginFormElement.reset();
+                
+                // Update header UI
+                updateHeaderForAuth();
+                
+                alert('Login successful! Welcome back!');
+            } catch (error) {
+                alert(error.message || 'Login failed. Please check your credentials.');
+            }
         });
     }
 
     if (signupFormElement) {
-        signupFormElement.addEventListener('submit', (e) => {
+        signupFormElement.addEventListener('submit', async (e) => {
             e.preventDefault();
             
             const firstName = document.getElementById('signupFirstName').value;
@@ -205,22 +222,31 @@ export function initAuthModal() {
                 return;
             }
             
-            // Demo: Show success message
-            console.log('Signup attempted with:', { firstName, lastName, email, password });
-            alert('Sign up functionality will be implemented with backend integration!');
+            try {
+                const user = await registerUser(firstName, lastName, email, password);
+                setCurrentUser(user);
+                
+                // Close modal
+                closeModal();
+                
+                // Clear form
+                signupFormElement.reset();
+                
+                // Reset password strength indicator
+                if (passwordStrengthFill) {
+                    passwordStrengthFill.style.width = '0%';
+                    passwordStrengthText.textContent = 'Password strength';
+                }
+                
+                // Update header UI
+                updateHeaderForAuth();
+                
+                alert('Account created successfully! Welcome to Zenjourney!');
+            } catch (error) {
+                alert(error.message || 'Registration failed. Please try again.');
+            }
         });
     }
 
-    // Social auth buttons (demo)
-    const socialBtns = document.querySelectorAll('.social-btn');
-    socialBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const provider = btn.classList.contains('google-btn') ? 'Google' :
-                           btn.classList.contains('facebook-btn') ? 'Facebook' : 'Apple';
-            console.log(`${provider} authentication clicked`);
-            alert(`${provider} authentication will be implemented!`);
-        });
-    });
 }
 
