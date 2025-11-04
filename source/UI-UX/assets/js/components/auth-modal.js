@@ -17,6 +17,10 @@ export function initAuthModal() {
     const signupPassword = document.getElementById('signupPassword');
     const passwordStrengthFill = document.getElementById('passwordStrengthFill');
     const passwordStrengthText = document.getElementById('passwordStrengthText');
+    
+    // Terms checkbox and submit button
+    const agreeTerms = document.getElementById('agreeTerms');
+    const signupSubmitBtn = document.getElementById('signupSubmitBtn');
 
     // Open modal with login form
     function openLoginModal() {
@@ -166,6 +170,24 @@ export function initAuthModal() {
         return 'strong';
     }
 
+    // Terms checkbox handler - enable/disable submit button
+    if (agreeTerms && signupSubmitBtn) {
+        // Function to update button state
+        function updateSubmitButtonState() {
+            if (agreeTerms.checked) {
+                signupSubmitBtn.disabled = false;
+            } else {
+                signupSubmitBtn.disabled = true;
+            }
+        }
+
+        // Initial state - button should be disabled
+        updateSubmitButtonState();
+
+        // Listen for checkbox changes
+        agreeTerms.addEventListener('change', updateSubmitButtonState);
+    }
+
     // Form submission handlers (prevent default for demo)
     const loginFormElement = loginForm?.querySelector('form');
     const signupFormElement = signupForm?.querySelector('form');
@@ -210,17 +232,5 @@ export function initAuthModal() {
             alert('Sign up functionality will be implemented with backend integration!');
         });
     }
-
-    // Social auth buttons (demo)
-    const socialBtns = document.querySelectorAll('.social-btn');
-    socialBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const provider = btn.classList.contains('google-btn') ? 'Google' :
-                           btn.classList.contains('facebook-btn') ? 'Facebook' : 'Apple';
-            console.log(`${provider} authentication clicked`);
-            alert(`${provider} authentication will be implemented!`);
-        });
-    });
 }
 
