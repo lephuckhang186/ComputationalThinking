@@ -312,31 +312,18 @@
     transform: translateY(0);
 }
 
-/* Divider */
-.divider {
-    position: relative;
-    text-align: center;
-    margin: 16px 0;
+.auth-submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    filter: blur(1px);
+    background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+    pointer-events: none;
 }
 
-.divider::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: #e5e7eb;
+.auth-submit-btn:disabled:hover {
+    transform: none;
+    box-shadow: none;
 }
-
-.divider span {
-    position: relative;
-    background: white;
-    padding: 0 16px;
-    font-size: 14px;
-    color: #9ca3af;
-}
-
 
 /* Footer */
 .auth-form-footer {
