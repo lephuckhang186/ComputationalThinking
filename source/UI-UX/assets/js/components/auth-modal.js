@@ -20,6 +20,10 @@ export function initAuthModal() {
     const signupPassword = document.getElementById('signupPassword');
     const passwordStrengthFill = document.getElementById('passwordStrengthFill');
     const passwordStrengthText = document.getElementById('passwordStrengthText');
+    
+    // Terms checkbox and submit button
+    const agreeTerms = document.getElementById('agreeTerms');
+    const signupSubmitBtn = document.getElementById('signupSubmitBtn');
 
     // Open modal with login form
     function openLoginModal() {
@@ -169,6 +173,24 @@ export function initAuthModal() {
         return 'strong';
     }
 
+    // Terms checkbox handler - enable/disable submit button
+    if (agreeTerms && signupSubmitBtn) {
+        // Function to update button state
+        function updateSubmitButtonState() {
+            if (agreeTerms.checked) {
+                signupSubmitBtn.disabled = false;
+            } else {
+                signupSubmitBtn.disabled = true;
+            }
+        }
+
+        // Initial state - button should be disabled
+        updateSubmitButtonState();
+
+        // Listen for checkbox changes
+        agreeTerms.addEventListener('change', updateSubmitButtonState);
+    }
+
     // Form submission handlers (prevent default for demo)
     const loginFormElement = loginForm?.querySelector('form');
     const signupFormElement = signupForm?.querySelector('form');
@@ -247,6 +269,5 @@ export function initAuthModal() {
             }
         });
     }
-
 }
 
